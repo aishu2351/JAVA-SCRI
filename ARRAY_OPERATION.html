@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		Before insert and delete operation the array list
+		<p id="d"></p>
+		After deleting first and last elements in the array
+		<p id="demo"></p>
+		After inserting first and last elements in the array		
+		<p id="demo2"></p>
+		<script>
+		var A = ["A1","A2","A3","A4"];
+		document.getElementById("d").innerHTML=A;
+		
+		A.pop();	//delete last element in the array
+		A.shift();	//delete first element in the array
+		
+		document.getElementById("demo").innerHTML=A.join(" , ");
+		
+		A.push("A4");	//inserting last element in the array
+		A.unshift("A1");	//inserting first element in the array
+		
+		document.getElementById("demo2").innerHTML=A.join(" <br> ");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>Before Sorting</h1>
+		<p id="demo"></p>
+		<h1>After Sorting</h1>
+		<p id="demo2"></p>
+		<h1>After Reversing</h1>
+		<p id="demo3"></p>
+		<script>
+		var A = ["Kiwi","Banana","Apple","Watermelon","Orange","Strawberry","Lemon"];
+		document.getElementById("demo").innerHTML=A.join(" <br> ");
+		A.sort();
+		document.getElementById("demo2").innerHTML=A.join(" <br> ");
+		A.reverse();
+		document.getElementById("demo3").innerHTML=A.join(" <br> ");
+		</script>
+	</body>
+</html>
