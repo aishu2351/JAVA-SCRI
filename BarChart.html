@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+	['Days','Hours per Day'],
+  	['Monday', 8],
+ 	 ['Tuesday', 2],
+	  ['Wednesday', 4],
+ 	 ['Thursday', 2],
+ 	 ['Friday', 8],
+ 	 ['Saturday', 6],
+ 	 ['Sunday', 7]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Weather Report',
+            subtitle: 'Rain Level of last week',
+          },
+          bars: 'vertical'
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  <body bgcolor="pink">
+<br><br><br>
+<center>
+    <div id="barchart_material" style="width: 900px; height: 500px;"></div>
+</center>
+  </body>
+</html>
